@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <title>{% block title %}{% endblock %} - HB</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% if session.logged_in %}
+    <div id="menu_bar">
+      {% block menu_bar %}
+        <a href="{{ url_for('stock') }}">Stock</a>&nbsp;&nbsp;
+        |&nbsp;&nbsp;EDS&nbsp;&nbsp;
+        |&nbsp;&nbsp;KAIDA Registration&nbsp;&nbsp;
+        |&nbsp;&nbsp;SAGAI Registration<br>
+        <a href="{{ url_for('logout') }}">Log-out</a>
+        {% with msg = get_flashed_messages() %}
+          {{ msg[-1] }}
+        {% endwith %}
+        <hr>
+      {% endblock%}</div>
+    {% endif %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      <hr><center>
+        &copy; Copyright 2016 by Sean.
+      </center>
+      {% endblock %}
+    </div>
+  </body>
+</html>
