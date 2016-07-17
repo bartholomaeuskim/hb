@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block menu1 %}
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+  <a href="{{ url_for('index') }}" class="mdl-layout__tab">Notice</a>
+  <a href="{{ url_for('registration') }}" class="mdl-layout__tab">Registration</a>
+  <a href="{{ url_for('shipping') }}" class="mdl-layout__tab">Shipping Schedule</a>
+  <a href="{{ url_for('stock') }}" class="mdl-layout__tab is-active">Stock</a>
+  <a href="{{ url_for('eds') }}" class="mdl-layout__tab">EDS</a>
+</div>
+{% endblock %}
+{% block menu2 %}
+<main class="mdl-layout__content">
+  <section class="mdl-layout__tab-panel is-active" id="scroll-tab-4">
+    <div class="page-content">
+      {% include "/contents/stock_content.html" %}
+    </div>
+  </section>
+</main>
+{% endblock %}

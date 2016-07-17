@@ -1,0 +1,35 @@
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+  <div class="mdl-tabs__tab-bar" style="float: left;">
+    <a href="#kaida" class="mdl-tabs__tab is-active">KAIDA</a>
+    <a href="#sagai" class="mdl-tabs__tab">SAGAI</a>
+  </div>
+  <div style="float: left; padding-left: 20px;">
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 120px; margin-right: 20px;">
+        <input class="mdl-textfield__input" type="date" style="font-size: 12px;" id="date">
+        <label class="mdl-textfield__label" style="text-align: right; font-size: 10px;" for="date">Based on</label>
+      </div>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="peugeot" style="display: inline;">
+        <input type="checkbox" id="peugeot" class="mdl-checkbox__input" checked>
+        <span class="mdl-checkbox__label" style="display: inline-block; width: 60px; font-size: 12px;">Peugeot</span>
+      </label>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="DS" style="display: inline;">
+        <input type="checkbox" id="DS" class="mdl-checkbox__input" checked>
+        <span class="mdl-checkbox__label" style="display: inline-block; width: 60px; font-size: 12px;">DS</span>
+      </label>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="citroen" style="display: inline;">
+        <input type="checkbox" id="citroen" class="mdl-checkbox__input" checked>
+        <span class="mdl-checkbox__label" style="display: inline-block; width: 60px; font-size: 12px;">Citroen</span>
+      </label>
+      <button class="mdl-button mdl-js-button mdl-button--primary mdl-button--raised" type="submit">
+        Go
+      </button>
+    </form>
+  </div>
+  <div class="mdl-tabs__panel is-active" id="kaida" style="clear: both;">
+    You'll see the KAIDA stock on this page.
+  </div>
+  <div class="mdl-tabs__panel" id="sagai" style="clear: both;">
+    You'll see the SAGAI stock on this page.
+  </div>
+</div>

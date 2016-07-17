@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    {% if error %}
+    <script type="text/javascript">
+      alert("{{ error }}");
+    </script>
+    {% endif %}
+    <script type="text/javascript">
+      window.location.href = "{{ url_for('index') }}"
+    </script>
+  </body>
+</html>
